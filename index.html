@@ -58,7 +58,6 @@
       position: relative;
     }
 
-    /* Хештеги — вертикально, слева */
     .side-text {
       display: flex;
       flex-direction: column;
@@ -72,18 +71,18 @@
     }
 
     .side-text span {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  margin-bottom: 20px;
-  transform: rotate(180deg); /* теперь снизу вверх */
-}
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      margin-bottom: 20px;
+      transform: rotate(180deg);
+    }
 
     .content-block {
       margin-left: 30px;
     }
 
     .content-block h4 {
-color: #fff;
+      color: #fff;
     }
 
     .hero-left h4 {
@@ -128,7 +127,7 @@ color: #fff;
       position: relative;
       display: inline-block;
       margin-top: 60px;
-      transform: scale(1.05);
+      transform: scale(0.9); /* уменьшили масштаб */
     }
 
     .image-frame-wrapper img {
@@ -163,7 +162,7 @@ color: #fff;
 
     .pagination {
       position: relative;
-      top: 60px;
+      top: 30px;
       left: 0;
       color: #fff;
       font-size: 14px;
@@ -172,7 +171,7 @@ color: #fff;
 
     .scroll-hint {
       position: absolute;
-      right: 60px;
+      right: 10px;
       bottom: 10px;
       writing-mode: vertical-lr;
       text-orientation: mixed;
@@ -230,7 +229,7 @@ color: #fff;
     <div class="hero-right">
       <div class="image-frame-wrapper">
         <div class="image-border"></div>
-        <img src="c:\Users\user\Pictures\Screenshots\Снимок экрана 2025-03-31 195533.png" alt="Dish with eggs and greens">
+        <img src="https://d2rbyiw1vv51io.cloudfront.net/web/ikea4/pageImages/page__en_lt_1644348096__3_88.jpeg" alt="Dish with eggs and greens">
       </div>
       <div class="pagination">01 — 02 03 04</div>
       <div class="scroll-hint">SCROLL</div>
@@ -238,6 +237,7 @@ color: #fff;
   </section>
 </body>
 </html>
+
 
 
 
