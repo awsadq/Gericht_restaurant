@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gericht Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #0c0c0c;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    header .logo {
+      font-size: 35px;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px;
+      position: relative;
+    }
+
+    .hero-left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    /* Хештеги — вертикально, слева */
+    .side-text {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    .side-text span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin-bottom: 20px;
+  transform: rotate(180deg); /* теперь снизу вверх */
+}
+
+    .content-block {
+      margin-left: 30px;
+    }
+
+    .content-block h4 {
+color: #fff;
+    }
+
+    .hero-left h4 {
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      line-height: 1.2;
+      color: #eace81;
+    }
+
+    .hero-left p {
+      margin: 20px 0;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .hero-left button {
+      padding: 10px 20px;
+      border: 1px solid #c5b47f;
+      background-color: #c5b47f;
+      color: #000;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .hero-left button:hover {
+      background-color: #fff5d0;
+      color: #000;
+    }
+
+    .hero-right {
+      width: 45%;
+      position: relative;
+    }
+
+    .image-frame-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 60px;
+      transform: scale(1.05);
+    }
+
+    .image-frame-wrapper img {
+      width: 100%;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-border {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 70%;
+      height: 70%;
+      border-top: 17px solid #f1dda6;
+      border-left: 17px solid #f1dda6;
+      z-index: 1;
+    }
+
+    .image-frame-wrapper::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 70%;
+      height: 70%;
+      border-right: 17px solid #f1dda6;
+      border-bottom: 17px solid #f1dda6;
+      z-index: 0;
+    }
+
+    .pagination {
+      position: relative;
+      top: 60px;
+      left: 0;
+      color: #fff;
+      font-size: 14px;
+      margin-left: 20px;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      right: 60px;
+      bottom: 10px;
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      color: #c5b47f;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-left, .hero-right {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .side-text, .scroll-hint, .pagination {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">GERÍCHT</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Pages</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Landing</a>
+    </nav>
+    <div>
+      <a href="#" style="margin-right: 20px; color: #fff; font-size: 14px;">Log In / Registration</a>
+      <a href="#" style="color: #c5b47f; font-size: 14px;">Book Table</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="side-text">
+        <span>#Bar</span>
+        <span>#Gericht</span>
+      </div>
+      <div class="content-block">
+        <h4>Chase The New Flavour</h4>
+        <h1>The Key To<br>Fine Dining</h1>
+        <p> Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus.</p>
+        <button>Explore Menu</button>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="image-frame-wrapper">
+        <div class="image-border"></div>
+        <img src="c:\Users\user\Pictures\Screenshots\Снимок экрана 2025-03-31 195533.png" alt="Dish with eggs and greens">
+      </div>
+      <div class="pagination">01 — 02 03 04</div>
+      <div class="scroll-hint">SCROLL</div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
